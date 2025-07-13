@@ -41,7 +41,7 @@ const ProfileCard: React.FC = () => {
       {/* Name and Title */}
       <div className="w-115 h-25 pt-3 pb-4 flex flex-col items-start z-10 pl-4 relative">
         {/* Header gradient overlay from left */}
-        <div className="absolute left-0 top-0 bottom-0 w-full bg-gradient-to-r from-black/60 via-black/40 via-black/40 to-transparent pointer-events-none z-5" />
+        <div className="absolute left-0 top-0 bottom-0 w-full bg-gradient-to-r from-black/60 via-black/40  to-transparent pointer-events-none z-5" />
         <h2 className="text-3xl md:text-2xl font-bold text-white mb-2 drop-shadow-lg text-left relative z-10">
           {PROFILE.name}
         </h2>
