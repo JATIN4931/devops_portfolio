@@ -1,8 +1,9 @@
+"use client";
+
 import React, { useRef } from "react";
-import { useRouter } from 'next/navigation';
 
 const PROFILE = {
-  name: "Jatin Thakur",
+  name: "Jatin Kumar",
   title: "DevOps Engineer",
   avatarUrl: "/pr.jpg",
   handle: "welcome to my portfolio",

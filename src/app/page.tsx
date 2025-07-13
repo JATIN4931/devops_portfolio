@@ -8,7 +8,7 @@ import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import StatsSection from '@/components/StatsSection';
-import CertificatesSection from '@/components/CertificatesSection';
+// import CertificatesSection from '@/components/CertificatesSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 
@@ -35,7 +35,7 @@ export default function Home() {
           <SkillsSection />
           <ProjectsSection />
           <StatsSection />
-          <CertificatesSection />
+          {/* <CertificatesSection /> */}
           <BlogSection />
           <ContactSection />
         </>
