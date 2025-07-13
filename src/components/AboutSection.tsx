@@ -62,7 +62,7 @@ export default function AboutSection() {
             <h3 className="text-2xl font-bold text-orange-400 mb-6">My Journey</h3>
             <div className="space-y-6 text-gray-300">
               <p className="text-lg leading-relaxed">
-                I'm a DevOps engineering student passionate about learning automation and infrastructure optimization. 
+                I&apos;m a DevOps engineering student passionate about learning automation and infrastructure optimization. 
                 My journey began with curiosity about how modern applications are deployed and scaled, 
                 which led me to explore cloud platforms, containerization, and infrastructure as code.
               </p>
@@ -72,7 +72,7 @@ export default function AboutSection() {
                 containerization technologies (Docker, Kubernetes), and modern CI/CD practices.
               </p>
               <p className="text-lg leading-relaxed">
-                When I'm not studying or working on projects, you can find me exploring new technologies, 
+                When I&apos;m not studying or working on projects, you can find me exploring new technologies, 
                 contributing to open-source projects, or sharing knowledge through technical writing 
                 and community engagement.
               </p>
@@ -175,11 +175,11 @@ export default function AboutSection() {
           <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl p-8 border border-red-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">Interested in Learning Together?</h3>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              I'm passionate about DevOps and always eager to learn from others. Let's connect to share knowledge, 
+              I&apos;m passionate about DevOps and always eager to learn from others. Let&apos;s connect to share knowledge, 
               collaborate on projects, or discuss the latest in cloud and infrastructure technologies.
             </p>
             <button className="bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300">
-              Let's Connect
+              Let&apos;s Connect
             </button>
           </div>
         </motion.div>

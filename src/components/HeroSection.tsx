@@ -66,7 +66,7 @@ export default function HeroSection() {
               className="mb-8"
             >
               <h2 className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-2">
-                I'm a{' '}
+                I&apos;m a{' '}
                 <span className="text-orange-400 font-semibold">
                   {texts[currentText]}
                 </span>

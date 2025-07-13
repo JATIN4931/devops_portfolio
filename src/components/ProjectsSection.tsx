@@ -108,8 +108,8 @@ export default function ProjectsSection() {
         >
           <h2 className="text-4xl font-bold text-red-500 mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            A showcase of my DevOps projects demonstrating infrastructure automation, CI/CD pipelines, and cloud-native solutions.
-          </p>
+                  A showcase of my DevOps projects demonstrating infrastructure automation, CI/CD pipelines, and cloud-native solutions.
+                </p>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 mx-auto mt-6"></div>
         </motion.div>
 

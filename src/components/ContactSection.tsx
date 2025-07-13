@@ -58,9 +58,9 @@ export default function ContactSection() {
           <h2 className="text-3xl font-bold text-red-500 mb-4">Get in touch</h2>
           <div className="w-24 h-1 bg-red-500 mx-auto mb-8"></div>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Is there something on your mind you'd like to talk about? Whether it's related to DevOps, 
+            Is there something on your mind you&apos;d like to talk about? Whether it&apos;s related to DevOps, 
             infrastructure automation, or just a casual conversation, I am here and ready to listen. 
-            Please don't hesitate to reach out to me at any time. 🙋‍♂️
+            Please don&apos;t hesitate to reach out to me at any time. ��‍♂️
           </p>
         </div>
         
@@ -129,7 +129,7 @@ export default function ContactSection() {
                 value={formData.subject}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-white placeholder-gray-400"
-                placeholder="What's this about?"
+                placeholder="What&apos;s this about?"
                 required
                 disabled={isSubmitting}
               />
