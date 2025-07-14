@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface Skill {
   name: string;
@@ -338,7 +339,7 @@ export default function SkillsSection() {
               {/* Skill Content */}
               <div className="text-center">
                 <div className="flex justify-center items-center mb-4">
-                      <img 
+                      <Image 
                         src={skill.logo} 
                         alt={skill.name}
                     className="w-16 h-16 object-contain filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300 transform group-hover:scale-110"

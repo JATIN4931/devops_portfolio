@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function HeroSection() {
   const [currentText, setCurrentText] = useState(0);
@@ -53,7 +54,7 @@ export default function HeroSection() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6"
             >
-              <span className="text-white">Hi, I'm </span>
+              <span className="text-white">Hi, I&apos;m </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
                 Jatin Kumar
               </span>
@@ -124,7 +125,7 @@ export default function HeroSection() {
               {/* Main Profile Image */}
               <div className="relative w-80 h-[28rem] bg-gradient-to-br from-red-500 via-orange-500 to-red-600 p-1 rounded-2xl">
                 <div className="w-full h-full bg-black overflow-hidden rounded-2xl">
-                  <img 
+                  <Image 
                     src="/jk.jpg" 
                     alt="Jatin Kumar"
                     className="w-50% h-full object-cover rounded-2xl"

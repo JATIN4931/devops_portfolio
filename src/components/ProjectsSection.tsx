@@ -226,7 +226,7 @@ export default function ProjectsSection() {
           <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl p-8 border border-red-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">Interested in My Learning Journey?</h3>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              I'm constantly learning and working on new projects to improve my DevOps skills. Let's connect to share knowledge, 
+              I&apos;m constantly learning and working on new projects to improve my DevOps skills. Let&apos;s connect to share knowledge, 
               collaborate on projects, or discuss the latest technologies in cloud and infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -234,7 +234,7 @@ export default function ProjectsSection() {
                 View All Projects
               </button>
               <button className="border-2 border-orange-500 text-orange-400 font-semibold px-8 py-3 rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300">
-                Let's Learn Together
+                Let&apos;s Learn Together
               </button>
         </div>
           </div>

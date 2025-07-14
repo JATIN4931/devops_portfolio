@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from 'next/image';
 
 const PROFILE = {
   name: "Jatin Kumar",
@@ -52,11 +53,13 @@ const ProfileCard: React.FC = () => {
       </div>
       {/* Large Profile Image filling lower half */}
       <div className="relative w-full flex-1 flex items-end justify-center z-0">
-        <img
+        <Image
           src={PROFILE.avatarUrl}
           alt={PROFILE.name + ' avatar'}
           className="w-full h-[150%] object-cover object-top rounded-b-3xl filter grayscale"
           style={{ position: 'absolute', left: 0, bottom: 0, right: 0 }}
+          width={500}
+          height={500}
           loading="lazy"
           onError={e => {
             const target = e.target as HTMLImageElement;
