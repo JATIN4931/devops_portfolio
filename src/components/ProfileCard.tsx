@@ -35,7 +35,7 @@ const ProfileCard: React.FC = () => {
   return (
     <div
       ref={cardRef}
-      className="relative w-[550px] h-[650px] md:w-[380px] md:h-[520px] rounded-4xl bg-gradient-to-br from-[#181c2a] via-[#000000] to-[#181c2a] border border-white-400/0 shadow-2xl flex flex-col items-center overflow-hidden transition-all duration-300"
+       className="relative w-full max-w-sm sm:max-w-md h-[520px] sm:h-[650px] md:w-[380px] md:h-[520px] rounded-4xl bg-gradient-to-br from-[#181c2a] via-[#000000] to-[#181c2a] border border-white-400/0 shadow-2xl flex flex-col items-center overflow-hidden transition-all duration-300"
       style={{ boxShadow: '0 0 32px 1 #fff' }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -52,7 +52,7 @@ const ProfileCard: React.FC = () => {
         </p>
       </div>
       {/* Large Profile Image filling lower half */}
-      <div className="relative w-140 flex-1/2 flex items-end justify-center z-0 ">
+      <div className="relative w-full flex-1 flex items-end justify-center z-0">
         <Image src={PROFILE.avatarUrl} alt={PROFILE.name + ' avatar'} width={550} height={150} className="w-full h-[150%] object-cover object-top rounded-b-3xl" quality={100} priority />
         {/* Optional overlay for effect */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#23243a]/100 via-transparent to-transparent pointer-events-none" />
