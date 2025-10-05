@@ -23,73 +23,19 @@ export default function ProjectsSection() {
   const projects: Project[] = [
     {
       id: '1',
-      title: 'Multi-Cloud CI/CD Pipeline',
-      description: 'Learning project: CI/CD pipeline deploying to AWS and Azure with automated testing and security scanning.',
-      longDescription: 'Built a comprehensive CI/CD pipeline using GitHub Actions as a learning project that deploys applications to both AWS and Azure cloud platforms. The pipeline includes automated testing, security vulnerability scanning, and blue-green deployment strategies for zero-downtime releases.',
+      title: 'DevOps Portfolio Website',
+      description: 'Modern portfolio website built with Next.js showcasing DevOps skills and projects with responsive design.',
+      longDescription: 'A comprehensive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. Features include animated components with Framer Motion, responsive design, contact form integration, and Docker containerization. Demonstrates modern web development practices and DevOps deployment strategies.',
       image: '/api/placeholder/400/250',
-      technologies: ['GitHub Actions', 'AWS', 'Azure', 'Docker', 'Terraform'],
-      category: 'CI/CD',
-      github: 'https://github.com/jatin-kumar/multi-cloud-cicd',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Docker', 'Framer Motion'],
+      category: 'Web Development',
+      github: 'https://github.com/JATIN4931/devops_portfolio',
+      live: '#',
       featured: true
-    },
-    {
-      id: '2',
-      title: 'Kubernetes Monitoring Stack',
-      description: 'Academic project: Complete monitoring solution with Prometheus, Grafana, and AlertManager on Kubernetes.',
-      longDescription: 'Deployed and configured a comprehensive monitoring stack on Kubernetes as part of my academic studies, including Prometheus for metrics collection, Grafana for visualization, and AlertManager for notifications. Created custom dashboards and alerting rules for infrastructure and application monitoring.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Kubernetes', 'Prometheus', 'Grafana', 'Helm', 'AlertManager'],
-      category: 'Monitoring',
-      github: 'https://github.com/jatin-kumar/k8s-monitoring',
-      featured: true
-    },
-    {
-      id: '3',
-      title: 'Infrastructure as Code',
-      description: 'Learning project: Reusable Terraform modules for AWS infrastructure with security best practices.',
-      longDescription: 'Created modular and reusable Terraform configurations for AWS infrastructure as a learning project, including VPC, EC2 instances, RDS databases, and load balancers. Implemented security best practices with proper IAM roles, security groups, and encryption.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Terraform', 'AWS', 'VPC', 'RDS', 'IAM'],
-      category: 'Infrastructure',
-      github: 'https://github.com/jatin-kumar/terraform-aws',
-      featured: true
-    },
-    {
-      id: '4',
-      title: 'Container Orchestration',
-      description: 'Academic project: Microservices architecture with Docker, Kubernetes, and Istio service mesh.',
-      longDescription: 'Designed and implemented a scalable microservices architecture using Docker containers orchestrated by Kubernetes as part of my academic coursework. Integrated Istio service mesh for advanced traffic management, security, and observability.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Docker', 'Kubernetes', 'Istio', 'Microservices', 'Helm'],
-      category: 'Containerization',
-      github: 'https://github.com/jatin-kumar/container-orchestration',
-      featured: false
-    },
-    {
-      id: '5',
-      title: 'Automated Backup System',
-      description: 'Learning project: Python-based backup automation with encryption and cloud storage integration.',
-      longDescription: 'Developed a comprehensive backup automation system using Python as a learning project that creates encrypted backups of databases and files. Features automated scheduling, cloud storage integration, and disaster recovery capabilities.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Python', 'Cron', 'Encryption', 'S3', 'Bash'],
-      category: 'Automation',
-      github: 'https://github.com/jatin-kumar/backup-automation',
-      featured: false
-    },
-    {
-      id: '6',
-      title: 'Log Aggregation Pipeline',
-      description: 'Academic project: ELK stack implementation for centralized logging with custom dashboards.',
-      longDescription: 'Built a centralized logging solution using the ELK stack (Elasticsearch, Logstash, Kibana) as part of my academic studies for comprehensive log aggregation and analysis. Created custom dashboards and alerting for application and system logs.',
-      image: '/api/placeholder/400/250',
-      technologies: ['ELK Stack', 'Docker', 'Kibana', 'Logstash', 'Elasticsearch'],
-      category: 'Monitoring',
-      github: 'https://github.com/jatin-kumar/log-aggregation',
-      featured: false
     }
   ];
 
-  const categories = ['All', 'CI/CD', 'Monitoring', 'Infrastructure', 'Containerization', 'Automation'];
+  const categories = ['All', 'Web Development'];
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
@@ -223,10 +169,10 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl p-8 border border-red-500/20">
+          {/* <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl p-8 border border-red-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">Interested in My Learning Journey?</h3>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              I'm constantly learning and working on new projects to improve my DevOps skills. Let's connect to share knowledge, 
+              I&apos;m constantly learning and working on new projects to improve my DevOps skills. Let&apos;s connect to share knowledge, 
               collaborate on projects, or discuss the latest technologies in cloud and infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -234,10 +180,10 @@ export default function ProjectsSection() {
                 View All Projects
               </button>
               <button className="border-2 border-orange-500 text-orange-400 font-semibold px-8 py-3 rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300">
-                Let's Learn Together
+                Let&apos;s Learn Together
               </button>
         </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
 

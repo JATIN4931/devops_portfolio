@@ -15,7 +15,6 @@ export default function Navigation({ onBackToLandingAction }: NavigationProps) {
     // { name: 'stats', href: '#stats' },
     { name: 'skills', href: '#skills' },
     { name: 'projects', href: '#projects' },
-    { name: 'blog', href: '#blog' },
     // { name: 'certificates', href: '#certificates' },
     { name: 'contact', href: '#contact' }
   ];

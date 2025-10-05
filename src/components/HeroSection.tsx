@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function HeroSection() {
   const [currentText, setCurrentText] = useState(0);
@@ -19,8 +20,33 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, [texts.length]);
 
+  const handleDownloadResume = () => {
+    try {
+      // Create a link element and trigger download
+      const link = document.createElement('a');
+      link.href = '/resume.jpg'; // Make sure you have resume.jpg in your public folder
+      link.download = 'Jatin_Kumar_Resume.jpg';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Optional: Show a success message
+      console.log('Resume download started');
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      // Fallback: Open in new tab if download fails
+      window.open('/resume.jpg', '_blank');
+    }
+  };
+
+  const handleViewProjects = () => {
+    // Open GitHub profile in a new tab
+    window.open('https://github.com/JATIN4931', '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center justify-center py-16 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center py-16 overflow-hidden bg-black">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.1),transparent_50%)]"></div>
@@ -53,7 +79,7 @@ export default function HeroSection() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6"
             >
-              <span className="text-white">Hi, I'm </span>
+              <span className="text-white">Hi, I&apos;m </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
                 Jatin Kumar
               </span>
@@ -82,11 +108,17 @@ export default function HeroSection() {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25 hover:scale-105">
+              <button 
+                onClick={handleDownloadResume}
+                className="group relative px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25 hover:scale-105"
+              >
                 <span className="relative z-10">Download Resume</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
-              <button className="group px-8 py-4 border-2 border-orange-500 text-orange-400 font-semibold rounded-lg transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-lg hover:shadow-orange-500/25 hover:scale-105">
+              <button 
+                onClick={handleViewProjects}
+                className="group px-8 py-4 border-2 border-orange-500 text-orange-400 font-semibold rounded-lg transition-all duration-300 hover:bg-orange-500 hover:text-white hover:shadow-lg hover:shadow-orange-500/25 hover:scale-105"
+              >
                 View Projects
               </button>
             </motion.div>
@@ -122,12 +154,14 @@ export default function HeroSection() {
           >
             <div className="relative">
               {/* Main Profile Image */}
-              <div className="relative w-80 h-[28rem] bg-gradient-to-br from-red-500 via-orange-500 to-red-600 p-1 rounded-2xl">
+              <div className="relative w-80 h-[28rem] bg-gradient-to-br gray p-1 rounded-2xl">
                 <div className="w-full h-full bg-black overflow-hidden rounded-2xl">
-                  <img 
-                    src="/jk.jpg" 
+                  <Image 
+                    src="/jk.png" 
                     alt="Jatin Kumar"
-                    className="w-50% h-full object-cover rounded-2xl"
+                    width={400}
+                    height={400}
+                    className="w-100% h-full object-cover rounded-2xl grayscale-5000"
                     onError={(e) => {
                       // Fallback to initials if image fails to load
                       const target = e.currentTarget as HTMLImageElement;

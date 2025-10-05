@@ -5,33 +5,47 @@ import { motion } from 'framer-motion';
 export default function AboutSection() {
   const experiences = [
     {
-      year: "2024 - Present",
-      title: "DevOps Engineering Student",
-      company: "Self-Learning & Academic Projects",
-      description: "Learning infrastructure automation, CI/CD pipelines, and cloud-native solutions through hands-on projects"
+      year: "Aug 2024 - Present",
+      title: "DevOps & ML Engineer",
+      company: "Personal Projects & Learning",
+      description: "Currently working on DevOps practices while continuing ML projects. Building CI/CD pipelines for ML models, containerizing applications with Docker, and learning Kubernetes orchestration."
     },
     {
-      year: "2023 - 2024",
-      title: "Cloud & DevOps Learning",
-      company: "Personal Projects & Courses",
-      description: "Started exploring cloud platforms and containerization technologies through online courses and tutorials"
+      year: "Jan 2024 - Jul 2024",
+      title: "Machine Learning Developer",
+      company: "Academic & Personal Projects",
+      description: "Developed machine learning models using Python, TensorFlow, and scikit-learn. Built predictive models, worked on data preprocessing, and created ML pipelines for various problem domains."
     },
     {
-      year: "2022 - 2023",
-      title: "Programming Fundamentals",
-      company: "Academic Studies",
-      description: "Built foundation in programming and software development concepts"
+      year: "Jun 2023 - Dec 2023",
+      title: "Full Stack Web Developer",
+      company: "Freelance & Personal Projects",
+      description: "Built responsive web applications using React, Node.js, and databases. Created portfolio websites, e-commerce platforms, and learned modern web development frameworks and deployment practices."
+    },
+    {
+      year: "Sep 2022 - May 2023",
+      title: "Programming Student",
+      company: "College - Computer Science",
+      description: "Started programming fundamentals in college with C, C++, and Java. Learned data structures, algorithms, object-oriented programming, and built foundation for software development."
     }
   ];
 
   const skills = [
-    { name: "Infrastructure as Code", level: 65 },
-    { name: "CI/CD Pipelines", level: 60 },
-    { name: "Cloud Architecture", level: 55 },
-    { name: "Container Orchestration", level: 50 },
-    { name: "Monitoring & Observability", level: 45 },
-    { name: "Security & Compliance", level: 40 }
+    { name: "Programming & Development", level: 85 },
+    { name: "Web Development (Full Stack)", level: 80 },
+    { name: "Machine Learning & AI", level: 75 },
+    { name: "DevOps & Infrastructure", level: 60 },
+    { name: "Containerization (Docker)", level: 65 },
+    { name: "CI/CD Pipelines", level: 55 }
   ];
+
+  const handleConnectClick = () => {
+    // LinkedIn messaging URL - opens directly to chat
+    const linkedinMessageUrl = 'https://www.linkedin.com/messaging/compose/?recipient=jatin-kumar-9169b9286';
+    
+    // Open LinkedIn messaging in a new tab
+    window.open(linkedinMessageUrl, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section className="w-full py-20 bg-gradient-to-b from-black to-gray-900" id="about">
@@ -62,19 +76,24 @@ export default function AboutSection() {
             <h3 className="text-2xl font-bold text-orange-400 mb-6">My Journey</h3>
             <div className="space-y-6 text-gray-300">
               <p className="text-lg leading-relaxed">
-                I&apos;m a DevOps engineering student passionate about learning automation and infrastructure optimization. 
-                My journey began with curiosity about how modern applications are deployed and scaled, 
-                which led me to explore cloud platforms, containerization, and infrastructure as code.
+                My tech journey started in college with programming fundamentals - learning C, C++, and Java through 
+                academic coursework. What began as classroom assignments quickly turned into a passion for problem-solving 
+                and building software solutions.
               </p>
               <p className="text-lg leading-relaxed">
-                I believe in the power of automation to transform how we build and deliver software. 
-                My learning approach combines hands-on projects with cloud platforms (AWS, Azure, GCP), 
-                containerization technologies (Docker, Kubernetes), and modern CI/CD practices.
+                After mastering programming basics, I ventured into web development, creating full-stack applications 
+                with React and Node.js. Building real-world projects like portfolio websites and e-commerce platforms 
+                taught me the importance of user experience and scalable architecture.
               </p>
               <p className="text-lg leading-relaxed">
-                When I&apos;m not studying or working on projects, you can find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge through technical writing 
-                and community engagement.
+                My curiosity led me to explore machine learning and AI, where I discovered the power of data-driven 
+                solutions. Working with Python, TensorFlow, and scikit-learn opened up a whole new world of predictive 
+                modeling and intelligent systems.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Currently, I&apos;m diving deep into DevOps practices, learning how to bridge the gap between 
+                development and operations. Combining my ML knowledge with infrastructure automation, I&apos;m building 
+                CI/CD pipelines for ML models and exploring containerization with Docker and Kubernetes.
               </p>
             </div>
 
@@ -178,7 +197,10 @@ export default function AboutSection() {
               I&apos;m passionate about DevOps and always eager to learn from others. Let&apos;s connect to share knowledge, 
               collaborate on projects, or discuss the latest in cloud and infrastructure technologies.
             </p>
-            <button className="bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300">
+            <button 
+              onClick={handleConnectClick}
+              className="bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300 hover:scale-105"
+            >
               Let&apos;s Connect
             </button>
           </div>

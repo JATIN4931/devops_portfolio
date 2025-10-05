@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from 'next/image';
 
 const PROFILE = {
   name: "Jatin Kumar",
   title: "DevOps Engineer",
-  avatarUrl: "/pr.jpg",
-  handle: "welcome to my portfolio",
+  avatarUrl: "/pr.png",
+  handle: "WELCOME TO MY PORTFOLIO",
 };
 
 const ProfileCard: React.FC = () => {
@@ -34,42 +35,32 @@ const ProfileCard: React.FC = () => {
   return (
     <div
       ref={cardRef}
-      className="relative w-[450px] h-[500px] md:w-[430px] md:h-[600px] rounded-4xl bg-gradient-to-br from-[#181c2a] via-[#23243a] to-[#181c2a] border border-white-400/0 shadow-2xl flex flex-col items-center overflow-hidden transition-all duration-300"
+      className="relative w-[550px] h-[650px] md:w-[380px] md:h-[520px] rounded-4xl bg-gradient-to-br from-[#181c2a] via-[#000000] to-[#181c2a] border border-white-400/0 shadow-2xl flex flex-col items-center overflow-hidden transition-all duration-300"
       style={{ boxShadow: '0 0 32px 1 #fff' }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       {/* Name and Title */}
-      <div className="w-115 h-25 pt-3 pb-4 flex flex-col items-start z-10 pl-4 relative">
-        {/* Header gradient overlay from left */}
-        <div className="absolute left-0 top-0 bottom-0 w-full bg-gradient-to-r from-black/60 via-black/40  to-transparent pointer-events-none z-5" />
-        <h2 className="text-3xl md:text-2xl font-bold text-white mb-2 drop-shadow-lg text-left relative z-10">
+      <div className="w-500 h-25 pt-3 pb-4 flex flex-col items-center z-10 relative">
+        {/* Header gradient overlay from top */}
+        <div className="absolute left-0 top-0 bottom-0 w-full bg-gradient-to-b from-black/60 via-black/40 to-transparent pointer-events-none z-5" />
+        <h2 className="text-3xl md:text-2xl font-bold text-white mb-2 drop-shadow-lg text-center relative z-10">
           {PROFILE.name}
         </h2>
-        <p className="text-lg md:text-lg text-gray-300 font-medium drop-shadow text-left relative z-10">
+        <p className="text-lg md:text-lg text-gray-300 font-medium drop-shadow text-center relative z-10">
           {PROFILE.title}
         </p>
       </div>
       {/* Large Profile Image filling lower half */}
-      <div className="relative w-full flex-1 flex items-end justify-center z-0">
-        <img
-          src={PROFILE.avatarUrl}
-          alt={PROFILE.name + ' avatar'}
-          className="w-full h-[150%] object-cover object-top rounded-b-3xl filter grayscale"
-          style={{ position: 'absolute', left: 0, bottom: 0, right: 0 }}
-          loading="lazy"
-          onError={e => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = "none";
-          }}
-        />
+      <div className="relative w-140 flex-1/2 flex items-end justify-center z-0 ">
+        <Image src={PROFILE.avatarUrl} alt={PROFILE.name + ' avatar'} width={550} height={150} className="w-full h-[150%] object-cover object-top rounded-b-3xl" quality={100} priority />
         {/* Optional overlay for effect */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#23243a]/80 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#23243a]/100 via-transparent to-transparent pointer-events-none" />
       </div>
       {/* Glassmorphic Footer overlays bottom of card, centered, with upward fade, and same margin as image */}
       <div className="absolute left-0 right-0 bottom-0 flex items-center justify-left bg-gradient-to-t from-black/100 via-black/60 to-transparent  border-white/0 rounded-b-3xl p-4 z-200">
         {/* Fading effect on top side of footer */}
-        <div className="absolute left-0 right-0 top-0 h-8 bg-gradient-to-b from-transparent via-black/15 to-transparent pointer-events-none z-10" />
+        <div className="absolute left-0 right-0 top-0 h-8 bg-gradient-to-b from-transparent via-black/50 to-transparent pointer-events-none z-10" />
         <span className="text-white/90 font-semibold text-base text-center w-full block z-20 relative">{PROFILE.handle}</span>
       </div>
     </div>

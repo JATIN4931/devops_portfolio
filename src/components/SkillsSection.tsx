@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface Skill {
   name: string;
@@ -44,7 +45,7 @@ export default function SkillsSection() {
       name: 'AWS', 
       category: 'Cloud & Infrastructure', 
       logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
-      proficiency: 70,
+      proficiency: 35,
       description: 'Cloud computing services and infrastructure management'
     },
     { 
@@ -338,19 +339,14 @@ export default function SkillsSection() {
               {/* Skill Content */}
               <div className="text-center">
                 <div className="flex justify-center items-center mb-4">
-                      <img 
-                        src={skill.logo} 
-                        alt={skill.name}
-                    className="w-16 h-16 object-contain filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300 transform group-hover:scale-110"
-                        onError={(e) => {
+                      <Image src={skill.logo} alt={skill.name} width={64} height={64} className="w-16 h-16 object-contain filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300 transform group-hover:scale-110" onError={(e) => {
                           const target = e.currentTarget as HTMLImageElement;
                           target.style.display = 'none';
                           const nextElement = target.nextElementSibling as HTMLElement;
                           if (nextElement) {
                             nextElement.style.display = 'block';
                           }
-                        }}
-                      />
+                        }} />
                   <span className="text-4xl hidden">{skill.name.charAt(0)}</span>
                     </div>
                 

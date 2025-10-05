@@ -60,7 +60,7 @@ export default function ContactSection() {
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Is there something on your mind you&apos;d like to talk about? Whether it&apos;s related to DevOps, 
             infrastructure automation, or just a casual conversation, I am here and ready to listen. 
-            Please don&apos;t hesitate to reach out to me at any time. ��‍♂️
+            Please don&apos;t hesitate to reach out to me at any time. 
           </p>
         </div>
         
@@ -155,7 +155,7 @@ export default function ContactSection() {
             {/* Status Messages */}
             {submitStatus === 'success' && (
               <div className="bg-green-500/10 border border-green-500/30 text-green-400 px-4 py-3 rounded-lg">
-                Message sent successfully! I'll get back to you soon.
+                Message sent successfully! I&apos;ll get back to you soon.
               </div>
             )}
             
