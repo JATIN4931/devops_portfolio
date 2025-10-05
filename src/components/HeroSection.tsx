@@ -154,27 +154,25 @@ export default function HeroSection() {
           >
             <div className="relative">
               {/* Main Profile Image */}
-              <div className="relative w-80 h-[28rem] bg-gradient-to-br gray p-1 rounded-2xl">
-                <div className="w-full h-full bg-black overflow-hidden rounded-2xl">
-                  <Image 
-                    src="/jk.png" 
-                    alt="Jatin Kumar"
-                    width={400}
-                    height={400}
-                    className="w-100% h-full object-cover rounded-2xl grayscale-5000"
-                    onError={(e) => {
-                      // Fallback to initials if image fails to load
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.style.display = 'none';
-                      const nextElement = target.nextElementSibling as HTMLElement;
-                      if (nextElement) {
-                        nextElement.style.display = 'flex';
-                      }
-                    }}
-                  />
-                  <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 items-center justify-center hidden rounded-2xl">
-                    <span className="text-6xl font-bold text-white">JK</span>
-                  </div>
+              <div className="relative w-80 h-[28rem] overflow-hidden rounded-2xl">
+                <Image 
+                  src="/jk.png" 
+                  alt="Jatin Kumar"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-300"
+                  onError={(e) => {
+                    // Fallback to initials if image fails to load
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.display = 'none';
+                    const nextElement = target.nextElementSibling as HTMLElement;
+                    if (nextElement) {
+                      nextElement.style.display = 'flex';
+                    }
+                  }}
+                />
+                <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 items-center justify-center hidden rounded-2xl">
+                  <span className="text-6xl font-bold text-white">JK</span>
                 </div>
               </div>
             </div>
